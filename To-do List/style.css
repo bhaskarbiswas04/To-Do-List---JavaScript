@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(120deg, #cb9633, #e8d22a);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.8rem;
+    border: none;
+    font-size: 1.5rem;
+    background: white;
+    border-radius: 15px;
+}
+
+form button{
+    cursor: pointer;
+    color: #cb9633;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    color: white;
+    background: #cb9633;
+}
+
+div.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.todo-container .todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+div.todo-container .todo-list .todo{
+    margin: 0.8rem;
+    background: white;
+    color: black;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+div.todo-container .todo-list .todo li{
+    flex: 1;
+}
+
+div.todo-container .todo-list .todo .marked-btn,
+div.todo-container .todo-list .todo .trash-btn{
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+div.todo-container .todo-list .todo .marked-btn{
+    background: rgb(24, 224, 24);
+}
+
+div.todo-container .todo-list .todo .trash-btn{
+    background-color: rgb(238, 70, 36);
+}
+
+div.todo-container .todo-list .todo .todo-item{
+    padding: 0 6px;
+}
+
+div.todo-container .todo-list .todo .fa-check,
+div.todo-container .todo-list .todo .fa-trash{
+    pointer-events: none;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: rgb(119, 8, 8);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgb(215, 150, 19);
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: rgb(215, 150, 19); 
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.fall{
+    transform: translateY(10rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
